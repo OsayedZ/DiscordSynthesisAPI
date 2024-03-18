@@ -10,6 +10,7 @@ public abstract class DiscordSynthesisAPI {
     public static DiscordSynthesisAPI get() throws Exception {
         if (instance == null) throw new Exception("Missing implementation");
         return instance;
+
     }
 
     public abstract IDSPlayer getPlayer(String name);
@@ -17,4 +18,5 @@ public abstract class DiscordSynthesisAPI {
     public abstract void sendMessage(ChannelType channel, EmbedBuilder builder);
     public abstract void sendChatSyncWebhook(IDSPlayer dsPlayer, String message, String displayName);
     public abstract void sendCommandLogWebhook(IDSPlayer dsPlayer, String message, String displayName);
+
 }
